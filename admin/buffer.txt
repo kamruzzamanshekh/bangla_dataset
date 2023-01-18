@@ -1,0 +1,61 @@
+<table id="example" class="table table-striped" style="width:100%">
+<?php
+ $limit = 100;
+$statement = $db->prepare("SELECT * FROM pos_ner");
+// $statement->bindParam(1,$f);
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+$total_rows = mysqli_num_rows($result);
+$total_pages = ceil ($total_rows / $limit);
+ ?>
+         <thead>
+             <tr>
+                 <th>file_name</th>
+                 <th>line_no</th>
+                 <th>word_no</th>
+                 <th>word</th>
+                 <th>pos1</th>
+                 <th>pos2</th>
+                 <th>pos3</th>
+                 <th>ner1</th>
+                 <th>ner2</th>
+                 <th>ner3</th>
+             </tr>
+         </thead>
+         <tbody>
+
+             <?php foreach ($pos_ner_table as $row) {
+
+                 ?> <tr>
+                    <td><?= $row['file_name'] ?></td>
+                      <td><?= $row['line_no'] ?></td>
+                       <td><?= $row['word_no'] ?></td>
+                        <td><?= $row['word'] ?></td>
+                        <td><?= $row['pos1'] ?></td>
+                    <td><?= $row['pos2'] ?></td>
+                      <td><?= $row['pos3'] ?></td>
+                  <td><?= $row['ner1'] ?></td>
+                   <td><?= $row['ner2'] ?></td>
+                    <td><?= $row['ner3'] ?></td>
+                  </tr>
+                 <?php
+
+             }?>
+
+         </tbody>
+         <tfoot>
+        <tr>
+          <th>file_name</th>
+          <th>line_no</th>
+          <th>word_no</th>
+          <th>word</th>
+          <th>pos1</th>
+          <th>pos2</th>
+          <th>pos3</th>
+          <th>ner1</th>
+          <th>ner2</th>
+          <th>ner3</th>
+        </tr>
+    </tfoot>
+
+  </table>
