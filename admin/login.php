@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'header.php';
-include("config.php");
+include("database.php");
 ?>
 <tbody>
 	<?php require_once('navbar.php'); ?>

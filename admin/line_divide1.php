@@ -1,5 +1,5 @@
 <?php
-require_once('config.php');
+require_once('database.php');
 if(isset($_POST["selected_file"])){
 //     // Capture selected country
     $files = $_POST["selected_file"];

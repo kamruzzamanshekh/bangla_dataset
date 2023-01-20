@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'header.php';
-require_once('config.php');
+require_once('database.php');
 
 if(isset($_SESSION['login']))
 {

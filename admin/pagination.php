@@ -1,7 +1,8 @@
 <?php
 require_once 'paginator.php';
+require_once 'config.php';
 
-$conn       = new mysqli( 'localhost', 'root', '', 'bpnd' );
+$conn       = new mysqli( $dbhost, $dbuser, $dbpass, $dbname );
 $conn->set_charset('utf8mb4');
 $limit      = ( isset( $_GET['limit'] ) ) ? $_GET['limit'] : 25;
 $page       = ( isset( $_GET['page'] ) ) ? $_GET['page'] : 1;
