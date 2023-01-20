@@ -38,7 +38,13 @@ if (isset($_POST['btn'])) {
        $w_id=$str[0];
        $pos_col=$str[1];
        $ner_col=$str[2];
-       $done_by=$str[3]."-".$_SESSION['id'];
+       if($str[3]=="")
+       {
+         $done_by=$_SESSION['name'];
+       }else {
+            $done_by=$str[3]."-".$_SESSION['name'];
+       }
+
 
       if($_POST['sub_pos']=="select")
       {

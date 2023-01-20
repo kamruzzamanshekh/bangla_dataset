@@ -5,7 +5,7 @@ require_once('config.php');
     $done=$row['done_by'];
     if($current_line==$row['line_no'])
     {
-      if((strpos($done,$id)===false) && ($row['pos1']=="" || $row['pos2']=="" || $row['pos3']==""))
+      if((strpos($done,$_SESSION['name'])===false) && ($row['pos1']=="" || $row['pos2']=="" || $row['pos3']==""))
       {
         if($row['pos1']==""){$pos_col="pos1"; $ner_col="ner1";}
         elseif ($row['pos2']=="") {$pos_col="pos2"; $ner_col="ner2";}
