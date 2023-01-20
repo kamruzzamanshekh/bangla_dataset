@@ -39,4 +39,4 @@ $results    = $Paginator->getData( $limit, $page );
     <?php endfor; ?>
     </tbody>
 </table>
-<?php //echo $Paginator->createLinks( $links, 'pagination pagination-sm' ); ?>
+<?php echo $Paginator->createLinks( $links, 'pagination pagination-sm' ); ?>
