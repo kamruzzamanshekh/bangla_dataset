@@ -28,6 +28,9 @@
 					<a class='nav-link' href='view_database.php'>view Database</a>
 				</li>
 				<li class='nav-item'>
+					<a class='nav-link' href='csv_format.php'>CSV</a>
+				</li>
+				<li class='nav-item'>
 					<a class='nav-link' href='logout.php'>Sign Out</a>
 				</li>
 				<?php

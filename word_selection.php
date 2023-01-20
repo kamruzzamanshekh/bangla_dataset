@@ -12,7 +12,6 @@ require_once('config.php');
         else{$pos_col="pos3"; $ner_col="ner3";}
         ?>
   <option value="<?php echo $row['w_id']."-".$pos_col."-".$ner_col."-".$done; ?>" class='text-success'><?php echo $row['word'];?></option>
-
 <?php }
 else {
   ?>

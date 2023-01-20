@@ -38,7 +38,7 @@ if (isset($_POST['btn'])) {
        $w_id=$str[0];
        $pos_col=$str[1];
        $ner_col=$str[2];
-       $done_by=$str[3].$_SESSION['id'];
+       $done_by=$str[3]."-".$_SESSION['id'];
 
       if($_POST['sub_pos']=="select")
       {
@@ -110,15 +110,13 @@ if (isset($_POST['btn'])) {
                     <label>Part of Speech (POS) for selected word </label>
                     <select class="pos_tagger form-select" name="pos">
                       <option value="select" selected>Select PoS Tag</option>
-                      <option value="NN">Noun(বিশেষ্য)</option>
-                      <option value="AD">Adjective(বিশেষণ)</option>
-                      <option value="PRO">Pronoun(সর্বনাম)</option>
-                      <option value="V">Verb (ক্রিয়া)</option>
-                      <option value="Adv">Adverb(ভাব বিশেষণ)</option>
-                      <option value="PRE">Preposition(পদান্বয়ী অব্যয়)</option>
-                      <option value="CON">Conjunction(সমুচ্চয়ী অব্যয়)</option>
-                      <option value="INT">Interjection(আবেগসূচক অব্যয়)</option>
-                      <option value="PUN">punctuation Marks(বিরামচিহ্ন বা যতিচিহ্ন)</option>
+                      <option value="NN">বিশেষ্য</option>
+                      <option value="AD">বিশেষণ</option>
+                      <option value="PRO">সর্বনাম</option>
+                      <option value="V">ক্রিয়া</option>
+                      <option value="ADV">ভাব বিশেষণ</option>
+                      <option value="PRE">অব্যয়</option>
+                      <option value="PUN">বিরামচিহ্ন বা যতিচিহ্ন</option>
                     </select>
                   </div>
 
@@ -133,15 +131,20 @@ if (isset($_POST['btn'])) {
                   <label>Select NER(Named Entity Reconization for slected Word </label>
                   <select class="form-select" id="ner" name="ner">
                     <option value="select" selected>Select NER</option>
-                    <option value="ORGANIZATION">ORGANIZATION </option>
-                    <option value="PERSON">PERSON</option>
-                    <option value="LOCATION"> LOCATION</option>
-                    <option value="DATE">DATE</option>
-                    <option value="TIME">TIME</option>
-                    <option value="MONEY">MONEY</option>
-                    <option value="PERCENT">PERCENT</option>
-                    <option value="FACILITY">FACILITY</option>
-                    <option value="OTHRES">OTHRES</option>
+                    <option value="PLACE">স্থান </option>
+                    <option value="TIME">সময়</option>
+                    <option value="ORG"> সংস্থা</option>
+                    <option value="COUNTRY">দেশ</option>
+                    <option value="CONTINENT">মহাদেশ</option>
+                    <option value="GEA">ভৌগলিক অবস্থা</option>
+                    <option value="GPA">ভূরাজনৈতিক অঞ্চল</option>
+                    <option value="WEATHER">আবহাওয়া</option>
+                    <option value="PERSON">ব্যক্তি</option>
+                    <option value="DATE">তারিখ</option>
+                    <option value="MONEY">টাকা</option>
+                    <option value="PERCENT">শতকরা</option>
+                    <option value="MONEY">সুযোগসুবিধা</option>
+                    <option value="FACILITY">OTHRES</option>
                   </select>
                 </div><br>
 
